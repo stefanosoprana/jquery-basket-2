@@ -99,38 +99,36 @@ $(document).ready(function(){
     $(listItem).append(listaGiocatori)
 
     $('.sidebar').append(listItem)
+
+
+
+    var stats = $('.template .stats').clone()
+
+    var item = $(stats).children('.item').append()
+
+    $(item).children('.player').append(playerNba[i].CodePlayer)
+    $(item).children('.punti').append(playerNba[i].Points)
+    $(item).children('.rimbalzi').append(playerNba[i].Rebounds)
+    $(item).children('.falli').append(playerNba[i].PersonalFouls)
+    $(item).children('.percentualetirida2').append(playerNba[i].PercentualeTirida2)
+    $(item).children('.percentualetirida3').append(playerNba[i].PercentualeTirida3)
+
+    $('.main').append(stats)
+
   }
 
-  // CHIEDO ALL UTENTE DI INSERIRE UN CODICE GIOCATORE
+  $('.listItem').click(function(){
 
-  // var CodePlayerUtente = prompt('Inserisci il codice di un giocatore');
-  //
-  // // var promptUp = CodePlayerUtente.toUpperCase();
-  //
-  // var giocatoreTrovato = false;
-  //
-  // for (var i = 0; i < playerNba.length; i++) {
-  //
-  //   if (playerNba[i].CodePlayer == CodePlayerUtente) {
-  //     giocatoreTrovato = true;
-  //     document.getElementById('player').innerHTML = playerNba[i].CodePlayer;
-  //     document.getElementById('punti').innerHTML = playerNba[i].Points;
-  //     document.getElementById('tiri').innerHTML = playerNba[i].Throws;
-  //     document.getElementById('rimbalzi').innerHTML = playerNba[i].Rebounds;
-  //     document.getElementById('falli').innerHTML = playerNba[i].PersonalFouls;
-  //     document.getElementById('puntida2').innerHTML = playerNba[i].Puntida2Effettuati;
-  //     document.getElementById('tirida2').innerHTML = playerNba[i].Tirida2Effettuati;
-  //     document.getElementById('percentualetirida2').innerHTML = playerNba[i].PercentualeTirida2;
-  //     document.getElementById('puntida3').innerHTML = playerNba[i].Puntida3Effettuati;
-  //     document.getElementById('tirida3').innerHTML = playerNba[i].Tirida3Effettuati;
-  //     document.getElementById('percentualetirida3').innerHTML = playerNba[i].PercentualeTirida3;
-  //     console.log(playerNba[i]);
-  //   };
-  // };
-  //
-  // if (giocatoreTrovato == false) {
-  //   alert('GIOCATORE NON TROVATO - ricarica la pagina per inserirne un\'altro')
-  // }
+    $('.listItem').removeClass('active')
 
+    $(this).addClass('active')
+
+    $('.stats').removeClass('active');
+
+    var numerogiocatore = $(this).index();
+
+    $('.stats').eq(numerogiocatore).addClass('active');
+
+  });
 
 });

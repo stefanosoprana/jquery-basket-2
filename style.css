@@ -34,6 +34,10 @@
   display: none;
 }
 
+.listItem.active {
+  background: orange;
+}
+
 .listItem {
   width: 100%;
   border: 1px solid black;
@@ -50,4 +54,30 @@
   border: 1px solid black;
   background: white;
   opacity: 0.8;
+}
+
+.stats {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.stats.active {
+  display: block
+}
+
+.item.code {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.item > span {
+  color: orange;
+}
+
+.item {
+  color: #60954e;
+  font-size: 30px;
+  padding: 20px;
 }
