@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: url('https://piellelivorno.it/wp-content/uploads/2017/09/sfondo-pallne-basket.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 70%;
+  height: 600px;
+}
+
+.sidebar {
+  float: left;
+  width: 30%;
+  height: 100%;
+  border: 1px solid black;
+  overflow: auto;
+  background: lightgrey;
+  opacity: 0.95;
+}
+
+.template {
+  display: none;
+}
+
+.listItem {
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px 0;
+  color: black;
+  cursor: pointer;
+}
+
+.main {
+  float: left;
+  width: 70%;
+  height: 100%;
+  border: 1px solid black;
+  background: white;
+  opacity: 0.8;
+}
